@@ -1,0 +1,24 @@
+{
+    "version": 1,
+    "author": "Alecio O.",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-pi-pico-w", "id": "pico", "top": -41.65, "left": -140.45, "attrs": {} },
+      {
+        "type": "wokwi-servo",
+        "id": "servo1",
+        "top": 27.8,
+        "left": 11.4,
+        "rotate": 270,
+        "attrs": {}
+      }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "pico:GND.8", "servo1:GND", "black", [ "h38.71", "v192", "h163.2" ] ],
+      [ "pico:3V3", "servo1:V+", "red", [ "h29.11", "v182.4", "h182.3" ] ],
+      [ "servo1:PWM", "pico:GP22", "blue", [ "v28.8", "h-153.4", "v-124.8" ] ]
+    ],
+    "dependencies": {}
+}
